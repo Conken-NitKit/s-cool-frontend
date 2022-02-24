@@ -24,5 +24,10 @@
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
-  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  "files.autoSave": "onFocusChange",
+  "files.trimTrailingWhitespace": true,
+  "workbench.startupEditor": "readme",
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.tree.indent": 18
 }
