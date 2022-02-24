@@ -27,11 +27,11 @@ jobs:
       - name: Installing node.js
         uses: actions/setup-node@v1
         with:
-          node-version: "16.x"
+          node-version: '16.x'
       - uses: actions/checkout@v1
       - uses: actions/cache@v2
         with:
-          path: "**/node_modules"
+          path: '**/node_modules'
           key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-npm-
@@ -57,11 +57,11 @@ jobs:
       - name: Installing node.js
         uses: actions/setup-node@v1
         with:
-          node-version: "16.x"
+          node-version: '16.x'
       - uses: actions/checkout@v1
       - uses: actions/cache@v2
         with:
-          path: "**/node_modules"
+          path: '**/node_modules'
           key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-npm-
@@ -87,12 +87,12 @@ jobs:
       - name: Installing node.js
         uses: actions/setup-node@v1
         with:
-          node-version: "16.x"
+          node-version: '16.x'
       - uses: actions/checkout@v1
       - uses: actions/cache@v2
         id: npm-cache
         with:
-          path: "**/node_modules"
+          path: '**/node_modules'
           key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-npm-
