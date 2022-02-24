@@ -1,8 +1,8 @@
-import { Menu, MenuId } from "constants/menu";
+import Link from 'next/link';
+import React, { useCallback } from 'react';
 
-import { MenuItem } from "components/Sidebar";
-import Link from "next/link";
-import React, { useCallback } from "react";
+import { MenuItem } from 'components/Sidebar';
+import { Menu, MenuId } from 'constants/menu';
 
 type Props = {
   menu: Menu;

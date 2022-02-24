@@ -1,17 +1,17 @@
-import { isMenuId } from "constants/menu";
+import { AppProps } from 'next/app';
+import { useRouter } from 'next/dist/client/router';
+import React, { useMemo } from 'react';
 
-import { DashBoard } from "domains/shared/Layout";
-import { AppProps } from "next/app";
-import { useRouter } from "next/dist/client/router";
-import React, { useMemo } from "react";
+import { isMenuId } from 'constants/menu';
+import { DashBoard } from 'domains/shared/Layout';
 
 export const Course: React.FC<AppProps> = () => {
   const router = useRouter();
   const { courseId } = router.query;
 
   const activeMenuId = useMemo(() => {
-    if (typeof courseId !== "string") {
-      return "";
+    if (typeof courseId !== 'string') {
+      return '';
     }
     return `courses-${courseId}`;
   }, [courseId]);
@@ -22,7 +22,7 @@ export const Course: React.FC<AppProps> = () => {
 
   return (
     <DashBoard activeMenuId={activeMenuId}>
-      <div className="w-11/12 max-w-240 mx-auto">
+      <div className="mx-auto w-11/12 max-w-240">
         <div className="pt-9 text-center">
           <h1 className="text-3xl leading-loose">React</h1>
           <p className="text-sm">

@@ -1,7 +1,7 @@
-import { MenuId } from "constants/menu";
+import React, { useCallback, useEffect, useRef } from 'react';
 
-import { MainSidebar } from "domains/shared/MainSidebar";
-import React, { useCallback, useEffect, useRef } from "react";
+import { MenuId } from 'constants/menu';
+import { MainSidebar } from 'domains/shared/MainSidebar';
 
 type Props = {
   activeMenuId?: MenuId;
@@ -25,7 +25,7 @@ export const DashBoard: React.FC<Props> = ({ children, activeMenuId }) => {
 
       if (scrollLeft !== 0 && scrollLeft !== bodyPosition) {
         bodyRef.current.scrollIntoView({
-          behavior: "smooth",
+          behavior: 'smooth',
         });
       }
     }, 600);
@@ -33,13 +33,13 @@ export const DashBoard: React.FC<Props> = ({ children, activeMenuId }) => {
 
   const handleBodyClick = useCallback(() => {
     bodyRef.current.scrollIntoView({
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   }, []);
 
   const handleSidebarItemClick = useCallback(() => {
     bodyRef.current.scrollIntoView({
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   }, []);
 
@@ -47,9 +47,9 @@ export const DashBoard: React.FC<Props> = ({ children, activeMenuId }) => {
     <div
       ref={sidebarRef}
       onTouchEnd={handleTouchEnd}
-      className="flex snap-x h-screen w-screen bg-secondary-regular overflow-x-scroll"
+      className="flex h-screen w-screen snap-x overflow-x-scroll bg-secondary-regular"
     >
-      <div className="snap-end shrink-0 w-10/12 max-w-xs h-full bg-primary-regular overflow-scroll">
+      <div className="h-full w-10/12 max-w-xs shrink-0 snap-end overflow-scroll bg-primary-regular">
         <MainSidebar
           activeMenuId={activeMenuId}
           itemClick={handleSidebarItemClick}
@@ -57,7 +57,7 @@ export const DashBoard: React.FC<Props> = ({ children, activeMenuId }) => {
       </div>
       <div
         ref={bodyRef}
-        className="snap-start shrink-0 lg:shrink w-screen lg:w-full h-full overflow-y-scroll"
+        className="h-full w-screen shrink-0 snap-start overflow-y-scroll lg:w-full lg:shrink"
         onClick={handleBodyClick}
       >
         {children}
