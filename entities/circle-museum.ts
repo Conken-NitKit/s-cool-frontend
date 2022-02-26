@@ -1,7 +1,7 @@
 export type CircleMuseum = {
   museumId: string;
   circleId: string;
-  displayName: string;
+  name: string;
   description?: string;
   createdAt: Date;
   updatedAt: Date;
@@ -12,9 +12,10 @@ export type CircleMuseum = {
 export type CircleMuseumProduct = {
   productId: string;
   lessonId: string;
-  displayName: string;
-  link?: string;
+  title: string;
+  description?: string;
   thumbnailUrl: string;
+  link?: string;
   published: boolean;
   createdAt: Date;
   updatedAt: Date;

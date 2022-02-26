@@ -1,7 +1,7 @@
 export type CircleLesson = {
   lessonId: string;
   circleId: string;
-  displayName: string;
+  name: string;
   description?: string;
   createdAt: Date;
   updatedAt: Date;
@@ -12,7 +12,7 @@ export type CircleLesson = {
 export type CircleLessonTask = {
   lessonId: string;
   circleId: string;
-  displayName: string;
+  name: string;
   link: string;
   published: boolean;
   createdAt: Date;

@@ -2,6 +2,7 @@ export type CircleMember = {
   memberId: string;
   userId: string;
   circleId: string;
+  displayName: string;
   role: MemberRole;
   status: memberStatus;
   createdAt: Date;
