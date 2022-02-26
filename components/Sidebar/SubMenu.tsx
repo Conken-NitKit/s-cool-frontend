@@ -60,7 +60,7 @@ export const SubMenu: React.FC<Props> = ({
     <li className="list-none">
       {!!label && (
         <div
-          className="flex cursor-pointer select-none items-center justify-between rounded-lg py-2 px-4 text-primary-regular hover:bg-secondary-regular"
+          className="flex justify-between items-center py-2 px-4 text-primary-regular hover:bg-secondary-regular rounded-lg cursor-pointer select-none"
           onClick={handleLabelClick}
         >
           <div>{label}</div>
@@ -75,10 +75,10 @@ export const SubMenu: React.FC<Props> = ({
       )}
       <ul
         ref={outerRef}
-        className="space-y-2 overflow-hidden pl-6 duration-150"
+        className="overflow-hidden pl-6 space-y-2 duration-150"
         onTransitionEnd={handleTransitionEnd}
       >
-        <div className="space-y-1 pt-1">{children}</div>
+        <div className="pt-1 space-y-1">{children}</div>
       </ul>
     </li>
   );
