@@ -29,5 +29,12 @@
   "files.trimTrailingWhitespace": true,
   "workbench.startupEditor": "readme",
   "workbench.tree.renderIndentGuides": "always",
-  "workbench.tree.indent": 18
+  "workbench.tree.indent": 18,
+  "cSpell.words": [
+    "ATCODER",
+    "TIKTOK",
+    "peing",
+    "qiita",
+    "zenn"
+  ]
 }
