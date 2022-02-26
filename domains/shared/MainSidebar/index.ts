@@ -1,2 +1,2 @@
-export * from "./MainMenuItem";
-export * from "./MainSidebar";
+export * from './MainMenuItem';
+export * from './MainSidebar';

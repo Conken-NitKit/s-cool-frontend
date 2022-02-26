@@ -1,6 +1,7 @@
-import classNames from "classnames";
-import React from "react";
-import { clamp } from "utils/clamp";
+import classNames from 'classnames';
+import React from 'react';
+
+import { clamp } from 'utils/clamp';
 
 type Props = {
   className?: string;
@@ -10,7 +11,7 @@ type Props = {
 export const ProgressBar: React.FC<Props> = ({ className, progress }) => {
   return (
     <div
-      className={classNames(className, "bg-tertiary-regular overflow-hidden")}
+      className={classNames(className, 'overflow-hidden bg-tertiary-regular')}
     >
       <div
         className="h-full bg-accent-primary-regular"

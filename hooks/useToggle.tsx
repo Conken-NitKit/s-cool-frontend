@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 export const useToggle = (
   defaultOpen = false,
-  onOpenChange?: (open?: boolean) => void
+  onOpenChange?: (open?: boolean) => void,
 ): [boolean, VoidFunction] => {
   const [state, setState] = useState(defaultOpen);
 

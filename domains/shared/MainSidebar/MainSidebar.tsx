@@ -1,8 +1,8 @@
-import { MENU, MenuId } from "constants/menu";
+import React from 'react';
 
-import { Sidebar, SubMenu } from "components/Sidebar";
-import { MainMenuItem } from "domains/shared/MainSidebar";
-import React from "react";
+import { Sidebar, SubMenu } from 'components/Sidebar';
+import { MENU, MenuId } from 'constants/menu';
+import { MainMenuItem } from 'domains/shared/MainSidebar';
 
 type Props = {
   activeMenuId: MenuId;
@@ -11,13 +11,13 @@ type Props = {
 
 export const MainSidebar: React.FC<Props> = ({ activeMenuId, itemClick }) => {
   return (
-    <Sidebar title={"ConDog"}>
+    <Sidebar title={'ConDog'}>
       <MainMenuItem
         menu={MENU.MEMBERS_DIRECTORY}
         activeMenuId={activeMenuId}
         onClick={itemClick}
       />
-      <SubMenu label={"学習ロードマップ"}>
+      <SubMenu label={'学習ロードマップ'}>
         <MainMenuItem
           menu={MENU.WEB_FRONT}
           activeMenuId={activeMenuId}

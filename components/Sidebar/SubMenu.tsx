@@ -1,12 +1,13 @@
-import classnames from "classnames";
-import { useToggle } from "hooks/useToggle";
-import React, { useCallback, useEffect, useRef } from "react";
+import classnames from 'classnames';
+import React, { useCallback, useEffect, useRef } from 'react';
+
+import { useToggle } from 'hooks/useToggle';
 
 type Props = {
   label: string;
   icon?: string; // TODO: アイコン名のみに制限する
   defaultOpen?: boolean;
-  onOpenChange?: (open?: boolean) => void;
+  onOpenChange?: (_?: boolean) => void;
 };
 
 export const SubMenu: React.FC<Props> = ({
@@ -23,19 +24,19 @@ export const SubMenu: React.FC<Props> = ({
     let endHeight = 0;
 
     if (opened) {
-      outerRef.current.style.height = "auto";
+      outerRef.current.style.height = 'auto';
       endHeight = outerRef.current.getBoundingClientRect().height;
       outerRef.current.style.height = `${prevHeight}px`;
     }
 
     setTimeout(() => {
-      outerRef.current.style.transitionProperty = "height";
+      outerRef.current.style.transitionProperty = 'height';
       outerRef.current.style.height = `${endHeight}px`;
     }, 50);
   }, [opened]);
 
   const endTransition = useCallback(() => {
-    outerRef.current.style.transitionProperty = "none";
+    outerRef.current.style.transitionProperty = 'none';
   }, []);
 
   useEffect(() => {
@@ -48,33 +49,33 @@ export const SubMenu: React.FC<Props> = ({
 
   const handleTransitionEnd = useCallback(
     (e: React.TransitionEvent) => {
-      if (e.currentTarget === outerRef.current && e.propertyName === "height") {
+      if (e.currentTarget === outerRef.current && e.propertyName === 'height') {
         endTransition();
       }
     },
-    [endTransition]
+    [endTransition],
   );
 
   return (
     <li className="list-none">
       {!!label && (
         <div
-          className="flex items-center justify-between cursor-pointer select-none px-4 py-2 rounded-lg	text-primary-regular hover:bg-secondary-regular"
+          className="flex justify-between items-center py-2 px-4 text-primary-regular hover:bg-secondary-regular rounded-lg cursor-pointer select-none"
           onClick={handleLabelClick}
         >
           <div>{label}</div>
           <span
-            className={classnames("transition-transform duration-150 ease-in", {
-              "rotate-90": opened,
+            className={classnames('transition-transform duration-150 ease-in', {
+              'rotate-90': opened,
             })}
           >
-            {">"}
+            {'>'}
           </span>
         </div>
       )}
       <ul
         ref={outerRef}
-        className="pl-6 overflow-hidden duration-150 space-y-2"
+        className="overflow-hidden pl-6 space-y-2 duration-150"
         onTransitionEnd={handleTransitionEnd}
       >
         <div className="pt-1 space-y-1">{children}</div>

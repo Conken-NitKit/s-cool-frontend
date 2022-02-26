@@ -1,0 +1,33 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.tslint": true
+  },
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+  "eslint.options": {
+    "rules": {
+      "import/default": "error",
+      "import/export": "error",
+      "import/named": "error",
+      "import/namespace": "error",
+      "import/no-duplicates": "error",
+      "import/no-named-as-default": "error",
+      "import/no-named-as-default-member": "error",
+      "import/no-unresolved": "error",
+      "no-unused-vars": "error",
+      "tailwindcss/classnames-order": "error"
+    }
+  },
+  "cSpell.userWords": ["tailwindcss"],
+  "javascript.format.enable": true,
+  "editor.tabSize": 2,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  "files.autoSave": "onFocusChange",
+  "files.trimTrailingWhitespace": true,
+  "workbench.startupEditor": "readme",
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.tree.indent": 18
+}

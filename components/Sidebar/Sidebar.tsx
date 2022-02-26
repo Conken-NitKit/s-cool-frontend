@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 type Props = {
   title?: string;
@@ -6,7 +6,7 @@ type Props = {
 
 export const Sidebar: React.FC<Props> = ({ title, children }) => {
   return (
-    <div className="h-full px-4">
+    <div className="px-4 h-full">
       {!!title && <div>{title}</div>}
       <div className="space-y-1">{children}</div>
     </div>

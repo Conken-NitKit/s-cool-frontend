@@ -1,5 +1,5 @@
-import classNames from "classnames";
-import React from "react";
+import classNames from 'classnames';
+import React from 'react';
 
 type Props = {
   label: string;
@@ -13,11 +13,11 @@ export const MenuItem: React.FC<Props> = ({ label, icon, active, onClick }) => {
   return (
     <li
       className={classNames(
-        "list-none cursor-pointer select-none px-4 py-2 rounded-lg	text-primary-regular",
+        'cursor-pointer select-none list-none rounded-lg px-4 py-2 text-primary-regular',
         {
-          "text-primary-inverted bg-accent-primary-regular shadow-md": active,
-          "hover:bg-secondary-regular": !active,
-        }
+          'bg-accent-primary-regular text-primary-inverted shadow-md': active,
+          'hover:bg-secondary-regular': !active,
+        },
       )}
       onClick={onClick}
     >
