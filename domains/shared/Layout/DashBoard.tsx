@@ -47,9 +47,9 @@ export const DashBoard: React.FC<Props> = ({ children, activeMenuId }) => {
     <div
       ref={sidebarRef}
       onTouchEnd={handleTouchEnd}
-      className="flex h-screen w-screen snap-x overflow-x-scroll bg-secondary-regular"
+      className="flex overflow-x-scroll w-screen h-screen bg-secondary-regular snap-x"
     >
-      <div className="h-full w-10/12 max-w-xs shrink-0 snap-end overflow-scroll bg-primary-regular">
+      <div className="overflow-scroll shrink-0 w-10/12 max-w-xs h-full bg-primary-regular snap-end">
         <MainSidebar
           activeMenuId={activeMenuId}
           itemClick={handleSidebarItemClick}
@@ -57,7 +57,7 @@ export const DashBoard: React.FC<Props> = ({ children, activeMenuId }) => {
       </div>
       <div
         ref={bodyRef}
-        className="h-full w-screen shrink-0 snap-start overflow-y-scroll lg:w-full lg:shrink"
+        className="overflow-y-scroll shrink-0 w-screen h-full snap-start lg:shrink lg:w-full"
         onClick={handleBodyClick}
       >
         {children}
