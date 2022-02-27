@@ -11,9 +11,7 @@ export type CircleMission = {
 };
 
 export const MISSION_STATUS = {
-  IDEA: 'idea', // アイデア段階
-  NOT_READY: 'not-ready', // 未着手（進行不可）
-  READY: 'ready', // 未着手（進行可能）
+  READY: 'ready', // 着手予定
   INPROGRESS: 'inprogress', // 進行中
   WAITING: 'waiting', // 諸事情により進行停止
   COMPLETE: 'complete', // 完了
