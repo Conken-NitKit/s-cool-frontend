@@ -21,6 +21,7 @@ export type CircleMemberInterview = {
   trainerId: string; // トレーナーのID
   traineeId: string; // トレーニーのID
   openedAt: Date; // 会議の実施日
+  completed: boolean;
   createdAt: Date;
   updatedAt: Date;
   createdBy: string;
