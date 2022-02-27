@@ -4,13 +4,21 @@ export type CircleCurriculum = {
   circleId: string;
   name: string;
   description?: string;
-  isPrivate: boolean;
+  publishTarget: CurriculumPublishTarget;
   teamIds: string[]; // カリキュラムが登録されているチーム一覧のID。
   createdAt: Date;
   updatedAt: Date;
   createdBy: string;
   updatedBy: string;
 };
+
+export const CURRICULUM_PUBLISH_TARGET = {
+  LIMITED: 'limited', // 公開対象を制限せず、サークルメンバー全員に共有
+  UNLIMITED: 'unlimited', // 公開対象を teamIds で指定されたチームのメンバーのみに制限
+  OWN: 'own', // 公開対象を自分だけに制限
+} as const;
+export type CurriculumPublishTarget =
+  typeof CURRICULUM_PUBLISH_TARGET[keyof typeof CURRICULUM_PUBLISH_TARGET];
 
 // カリキュラム内に登録されている課題
 export type CircleCurriculumTask = {
@@ -19,7 +27,6 @@ export type CircleCurriculumTask = {
   curriculumId: string;
   name: string;
   link: string;
-  published: boolean; // 公開状況
   createdAt: Date;
   updatedAt: Date;
   createdBy: string;
