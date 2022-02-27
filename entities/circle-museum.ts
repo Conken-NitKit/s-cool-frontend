@@ -1,3 +1,4 @@
+// 作品置き場（ミュージアム）
 export type CircleMuseum = {
   museumId: string;
   circleId: string;
@@ -9,9 +10,11 @@ export type CircleMuseum = {
   updatedBy: string;
 };
 
+// 作品
 export type CircleMuseumProduct = {
   productId: string;
-  lessonId: string;
+  circleId: string;
+  museumId: string;
   title: string;
   description?: string;
   thumbnailUrl: string;

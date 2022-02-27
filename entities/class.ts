@@ -1,5 +1,6 @@
-export type Circle = {
-  circleId: string;
+export type SchoolClass = {
+  classId: string;
+  schoolId: string;
   name: string;
   description?: string;
   suggestionJoinMessage?: string; // 加入時の確認画面で表示されるメッセージ
@@ -11,29 +12,29 @@ export type Circle = {
 };
 
 // アカウントIDを用いた直接招待
-export type CircleDirectInvite = {
+export type ClassDirectInvite = {
   inviteId: string;
   targetUserId: string;
-  circleId: string;
+  classId: string;
   canceled: boolean;
   createBy: Date;
   createdAt: Date;
 };
 
 // 招待リンク
-export type CircleInviteRequest = {
+export type ClassInviteRequest = {
   requestId: string;
-  circleId: string;
+  classId: string;
   isActive: boolean;
   createBy: Date; // 発行者のユーザーID
   createdAt: Date;
 };
 
 // 招待リンク経由での加入申請
-export type CircleInviteResponse = {
+export type ClassInviteResponse = {
   responseId: string;
   requestId: string;
-  circleId: string;
+  classId: string;
   userId: string;
   createdAt: Date;
 };

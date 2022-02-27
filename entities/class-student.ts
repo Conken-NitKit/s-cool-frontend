@@ -1,22 +1,16 @@
 export type Student = {
   studentId: string;
   userId: string;
-  schoolId: string;
   classId: string;
+  aliasCode?: string;
   displayName: string;
-  schoolRole: SchoolRole;
-  classRole: ClassRole;
+  role: ClassRole; // 所属クラスのアクセス権限
   createdAt: Date;
   updatedAt: Date;
+  joinedBy: string; // 招待者 or 承認者 のユーザーID
 };
 
-export const SCHOOL_ROLE = {
-  OWNER: 'owner',
-  ADMIN: 'admin',
-  MEMBER: 'member',
-} as const;
-export type SchoolRole = typeof SCHOOL_ROLE[keyof typeof SCHOOL_ROLE];
-
+// 所属クラスのアクセス権限
 export const CLASS_ROLE = {
   OWNER: 'owner',
   ADMIN: 'admin',
