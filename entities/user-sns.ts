@@ -15,7 +15,6 @@ export type UserSnsAccount = {
 
 export type SnsAccount = {
   [SNS.TWITTER]: string;
-  [SNS.TWITTER]: string;
   [SNS.FACEBOOK]: string;
   [SNS.INSTAGRAM]: string;
   [SNS.TIKTOK]: string;
