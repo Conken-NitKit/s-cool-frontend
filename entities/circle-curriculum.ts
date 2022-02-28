@@ -13,8 +13,8 @@ export type CircleCurriculum = {
 };
 
 export const CURRICULUM_PUBLISH_TARGET = {
-  LIMITED: 'limited', // 公開対象を制限せず、サークルメンバー全員に共有
-  UNLIMITED: 'unlimited', // 公開対象を teamIds で指定されたチームのメンバーのみに制限
+  UNLIMITED: 'unlimited', // 公開対象を制限せず、サークルメンバー全員に共有
+  LIMITED: 'limited', // 公開対象を teamIds で指定されたチームのメンバーのみに制限
   OWN: 'own', // 公開対象を自分だけに制限
 } as const;
 export type CurriculumPublishTarget =
