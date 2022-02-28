@@ -29,12 +29,3 @@ export type MemberStatus = typeof MEMBER_STATUS[keyof typeof MEMBER_STATUS];
 
 export const isAttendance = (status: MemberStatus): boolean =>
   status === MEMBER_STATUS.ATTENDANCE;
-
-export type CircleInvite = {
-  inviteId: string;
-  targetUserId: string;
-  circleId: string;
-  canceled: boolean;
-  createBy: Date;
-  createdAt: Date;
-};
