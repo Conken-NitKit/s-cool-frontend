@@ -5,13 +5,14 @@ export type CircleMemberRelation = {
   traineeId: string; // トレーニーのID
   isActive: boolean;
   shouldInterview: boolean; // 1on1MTG をやるか否か
-  interviewIntervalDay: number; // 1on1MTG の頻度
+  interviewIntervalDay: number; // 1on1MTG の頻度（日）
   createdAt: Date;
   updatedAt: Date;
   createdBy: string;
   updatedBy: string;
 };
 
+// 1on1MTG
 export type CircleMemberInterview = {
   interviewId: string;
   relationId: string;
@@ -20,7 +21,8 @@ export type CircleMemberInterview = {
   note: string;
   trainerId: string; // トレーナーのID
   traineeId: string; // トレーニーのID
-  openedAt: Date; // 会議の実施日
+  openedAt: Date; // 1on1MTGの実施日
+  announced: boolean; // 参加者に1on1MTGの開催をアナウンスしたか否か
   completed: boolean;
   createdAt: Date;
   updatedAt: Date;
